@@ -54,10 +54,13 @@ interface Direccion{
 }
 
 interface Producto{
-    name: string
-    price: number
+    readonly name: string
+    // readonly para que no se puedea modificar
+    price?: number
+    // ? para poner que es opcional
     stock: boolean
-    direccion: Direccion
+    direccion: Direccion,
+    discountCalculate(dto:number): number
 }
 
 const product:Producto = {
@@ -67,6 +70,8 @@ const product:Producto = {
     direccion:{
         street:'hispanidad',
         number:33        
-    }
+    },
+    discountCalculate: function xxx(dto) {return this.price || 0 *dto}
 
 }
+//product.name= 'Portatil'

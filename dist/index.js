@@ -20,5 +20,26 @@ identificador = 66;
 let state = 'Activo';
 state = 'Inactivo';
 state = 'Pendiente';
-state = 'cosa';
+//state = 'cosa'
 console.log(edad);
+const producto = {
+    nombre: 'ordenador',
+    precio: 2400,
+    stock: true
+};
+const jugadores = [
+    { nombre: 'Pepe', ptos: 33 },
+    { nombre: 'Ana', ptos: 22 },
+    { nombre: 'Luis', ptos: 44 }
+];
+const product = {
+    name: 'ordenador',
+    price: 2400,
+    stock: true,
+    direccion: {
+        street: 'hispanidad',
+        number: 33
+    },
+    discountCalculate: function xxx(dto) { return this.price || 0 * dto; }
+};
+//product.name= 'Portatil'
